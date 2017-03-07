@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		 crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+
+	<link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="styles.css">
+
+	<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>Employee Database</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Current Employees</div>
+					<div class="panel-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Employee Name</th>
+									<th>Role</th>
+									<th>Start Date</th>
+									<th>Months Worked</th>
+									<th>Month Rate ($)</th>
+									<th>Total Bill ($)</th>
+								</tr>
+							</thead>
+							<tbody id="employee-table">
+								
+							</tbody>
+						</table>
+					</div>				
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Add Employee</div>
+					<div class="panel-body">
+						<form>
+							<div class="form-group">
+								<label for="">Employee Name</label>
+								<input type="text" class="form-control" id="employee-name" placeholder="John Smith">
+							</div>
+
+							<div class="form-group">
+								<label for="">Job Title</label>
+								<input type="text" class="form-control" id="employee-role" placeholder="Lackey">
+							</div>
+
+							<div class="form-group">
+								<label for="">Start Date (YYYY-MM-DD - ex. 1999-12-31)</label>
+
+								<input type="text" class="form-control" id="start-date" placeholder="1999-12-31">
+
+							</div>
+
+							<div class="form-group">
+								<label for="">Monthly Rate</label>
+								<input type="text" class="form-control" id="monthly-rate" placeholder="0">
+							</div>
+
+							<button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="document.js"></script>
+</body>
+</html>
